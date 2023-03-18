@@ -10,7 +10,7 @@
 -	Serie samenstellen (welke foto's en in welke volgorde)
 -	Overzichtspagina van een serie 
 -	Serie als carrousel aanbieden
--	Serie als slideshow aanbieden
+-	(Visuele) waarschuwing als er geen alt-tekst is.
 
 
 <!--

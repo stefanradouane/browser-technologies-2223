@@ -1,4 +1,4 @@
-# Browser Technologies - De eindopdracht ✨ Progressive Enhanced Browser Technologie
+# Browser Technologies - De eindopdracht ✨ <em lang="en">Progressively Enhanced Browser Technology</em>
 
 Voor deze opdracht ga je een interactieve toepassing ontwerpen. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
 
@@ -15,7 +15,10 @@ Maak een demo op basis van een user story. Zorg dat alle gebruikers, met alle br
 Bouw je demo in 3 lagen, volgens het principe van _Progressive Enhancement_.
 
 Gebruik als enhancement een [Browser Technologie](https://platform.html5.org) die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning.
-Je onderzoekt hoe je verschillende _features_ door verschillende browsers worden ondersteund, hoe je voor goede fallback kan zorgen en je test de _features_ op verschillende browsers <del>en het Device Lab</del>.
+Je onderzoekt drie dingen: 
+- hoe je verschillende _features_ door verschillende browsers worden ondersteund, 
+- hoe je voor goede fallback kan zorgen 
+- je test de _features_ op verschillende (obscure) browsers.
 
 Polyfills en NPM packages op de client zijn niet toegestaan, op de server kun je doen wat je wil. Wat voor deze opdracht telt, is de HTML/CSS/JavaScript die aan de browser wordt aangeleverd.
 
@@ -28,15 +31,14 @@ Gebruik [caniuse.com](https://caniuse.com), [html5test.com](https://html5test.co
 2. [Nerdy T-Shirt](../usecases/Usecase-t-nerdy-shirt.md)
 3. [Online poll met resultaten](../usecases/Usecase-online-poll.md)
 4. [Online Foto album](../usecases/Usecase-online-foto-album.md)
-5. [Routebeschrijving naar het Device Lab](../usecases/Usecase-routebeschrijving-device-lab.md)
-6. [Sportwedstrijd score website](../usecases/Usecase-score-website.md)
+5. [Openbare boekenkasten in Amsterdam](../usecases/Usecase-boekenkasten.md)
 7. Heb je zelf een idee? Dat kan, schrijf een use case en kom even overleggen.
 
 ## Werkwijze
 
-Schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien. Bepaal de functional/reliable, usable en pleasurable laag.
+Schets eerst. Bijvoorbeeld een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien. Bepaal de functional/reliable, usable en pleasurable laag. *(Niet langer dan een uurtje, zo snel mogelijk de code in duiken!)*
 
-- Onderzoek voor de functional/reliable laag naar semantische HTML elementen
+- Doe voor de functional/reliable laag onderzoek naar semantische HTML elementen
 - Kijk voor de usable laag naar gebruiksvriendelijkheid en design patterns die je zou kunnen toepassen
 - De meest 'enhanced' versie is super vet, gaaf en prettig om te gebruiken … Dit is de pleasurable laag.
 

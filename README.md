@@ -35,7 +35,7 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 | Planning  | Woensdag  |  Donderdag | Vrijdag  |
 |---|---|---|---|
-| [Week 1](#week-1)  | Intro, College + briefing opdracht 1 | Presentaties opdracht 1, college +  briefing eindopdracht | Voortgangsgesprekken |
+| [Week 1](#week-1)  | Intro, College + briefing opdracht 1 | Presentaties opdracht 1, briefing eindopdracht, college | Voortgangsgesprekken |
 | [Week 2](#week-2)  | College + Briefing De eindopdracht  | College + werken aan de opdracht | Feedbackgesprekken  |
 | [Week 3](#week-3)  | Beoordelingen!  |
 
@@ -69,8 +69,8 @@ Daarna krijg je uitleg over opdracht 2. Voor deze opdracht ga je proberen het we
 | Donderdag 23/3 | Wat  |
 |---|---|
 | 9:30 | Opdracht 1 bespreken 🛹 |
-| 10:30 | College les 2 over de UX van HTML |
-|  | [Briefing Opdracht 2 💔 Breek het web](assignments/opdracht-2.md) |
+| 10:30 | [Briefing eindopdracht](assignments/eindopdracht.md) |
+| 15:30 | College les 2 over de UX van HTML |
 | 16:00 | Checkout per team |
 
 Lezen voor les 2 📖

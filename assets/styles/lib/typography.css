@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "NuMono";
+    src: url("../../fonts/NuMono.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Plaak";
+    src: url("../../fonts/Plaak.woff2") format("woff2");
+}

@@ -1,0 +1,24 @@
+<%- include('../partials/head', {title: image?.fileName.split("-")[0] ? image.fileName.split("-")[0] : "Foto niet gevonden"}) %>
+<%- include('../partials/header') %>
+    <% if (image) { %>
+    <h1><%- image.fileName.split("-")[0] %></h1>
+    <img src="<%- image.fileUrl %>" width="100%" alt="<%- image.altText %>" />
+    <p><%- image.altText %></p>
+    <% } else { %>
+      <%- include('../components/detailpage-error') %>
+    <% } %>
+
+    <!-- TODO: make this a partial -->
+    <% if (recommended) { %>
+    <section>
+      <h2>May also like</h2>
+      <% recommended.forEach(recommendation => { %>
+      <a href="/gallery/<%- recommendation.fileName.split("-")[0] %>">
+        <h3><%- recommendation.fileName.split("-")[0] %></h3>
+        <img src="<%- recommendation.fileUrl %>" width="25%" />
+      </a>
+      <% }) %>
+    </section>
+    <%}%>
+
+<%- include('../partials/footer') %>

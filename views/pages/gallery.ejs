@@ -1,0 +1,63 @@
+<%- include('../partials/head', {title: "Gallery"}) %>
+<%- include('../partials/header') %>
+<h1>World Wide Collage</h1>
+<h2>Make an image gallery in just a vew clicks</h2>
+<p>You can select an image to make a collage, or click on an image to see the detailpage</p>
+<form method="POST" enctype="multipart/form-data">
+  <div>
+    <label>
+      Image name*
+      <input type="text" name="img-name" required />
+    </label>
+  </div>
+      <div>
+        <label>
+          Image alt*
+          <input type="text" name="img-alt" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Location
+          <input type="text" name="img-name" disabled />
+        </label>
+      </div>
+      <div>
+        <label>
+          Date
+          <input type="date" name="img-name" disabled />
+        </label>
+      </div>
+      <div>
+        <label for="image-input">
+          Upload an image*
+          <input
+          type="file"
+          id="image-input"
+          name="img"
+          accept="image/*"
+          required />
+        </label>
+      </div>
+        <input type="submit" value="Upload" />
+    </form>
+    <section>
+      <h2>The image collection of the world</h2>
+      <form method="POST">
+        <input type="hidden" name="serie" value="true">
+        <% if (images) { %> <% images.forEach(image => { %>
+          <a href="/gallery/<%- image.fileName.split("-")[0] %>">
+            <img
+            width="22.5%"
+            src="<%- image.fileUrl %>"
+            alt="<%- image.altText %>" />
+          </a>
+          <label>
+            Select Image
+            <input type="checkbox" name="selected-image" value="<%- image.fileName %>">
+          </label>
+          <% }) %> <% } %>
+          <button>Make own serie</button>
+    </section>
+</form>
+<%- include('../partials/footer') %>

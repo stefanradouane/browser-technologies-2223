@@ -6,6 +6,12 @@ Minor Web design and Development - 2022/2023
 
 De demo is te bekijken via deze [link](http://localhost:4000).
 
+## 🔎 Inhoudsopgave
+
+- [Case](#📁-case---online-foto-album)
+- [Project installatie](#🔌-core-functionaliteiten)
+- [Criteria](#criteria)
+
 ## 📁 Case - Online foto album
 
 Ik heb gekozen voor de case een online foto album.

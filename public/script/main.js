@@ -8,19 +8,25 @@ if (input && image) {
    * Create and display @file after input
    */
   input.addEventListener("change", (e) => {
-    const file = input.files[0];
-    const reader = new FileReader();
+    // Check if FileReader is availible
+    if (window.FileReader) {
+      const file = input.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        image.src = e.target.result;
+        display.classList.add("image-form__display--active");
+      };
 
-    reader.onload = (e) => {
-      image.src = e.target.result;
-      display.classList.add("image-form__display--active");
-    };
-
-    if (!file) {
-      display.classList.remove("image-form__display--active");
-      return (image.src = "");
+      if (!file) {
+        display.classList.remove("image-form__display--active");
+        return (image.src = "");
+      }
+      reader.readAsDataURL(file);
+    } else {
+      // Fallback for when there is no filereader in the window.
+      // I did not make a fallback, so if filereader is not availible.
+      // Then the image will never be showed.
     }
-    reader.readAsDataURL(file);
   });
 }
 

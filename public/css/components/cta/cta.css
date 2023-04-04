@@ -1,0 +1,8 @@
+.cta {
+  padding: 7.5px 12.5px;
+  border-radius: 50px;
+  background-color: var(--sec-color);
+  font-size: 25px;
+  color: var(--black-color);
+  width: fit-content;
+}

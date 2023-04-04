@@ -1,0 +1,41 @@
+/* Anchor */
+.anchor {
+  --transition-elements: all;
+  transition: var(--transition-settings), 0ms padding, 0ms font-size;
+  font-size: clamp(16px, 3vmin, 28px);
+  text-decoration: none;
+  padding: 10px 12px;
+  background-color: var(--black-color);
+  color: var(--prim-color);
+  border-radius: 200px;
+  font-family: var(--body-font);
+  width: fit-content;
+  border: none;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.anchor--fw {
+  width: 100%;
+  text-align: center;
+}
+
+.anchor--btn {
+  margin-top: 10px;
+  text-decoration: none !important;
+}
+
+.anchor--sec {
+  background-color: var(--sec-hover-color);
+  color: var(--white-color);
+  border-radius: 200px;
+}
+
+.anchor--margin-top {
+  margin-top: 2%;
+}
+
+.anchor:hover {
+  text-decoration: underline;
+  background-color: var(--black-hover-color);
+}

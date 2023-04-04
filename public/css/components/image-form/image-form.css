@@ -1,0 +1,64 @@
+/* image form */
+.image-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  gap: 20px;
+  width: 100%;
+  max-width: 950px;
+}
+
+.image-form section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.image-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-form input {
+  background-color: var(--white-color);
+
+  font-family: var(--body-font);
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid var(--sec-color);
+  border-radius: 5px;
+}
+
+.image-form input[type="file"] {
+  padding: 0;
+  background-color: var(--white-color);
+}
+
+.image-form input[type="file"]::file-selector-button {
+  cursor: pointer;
+  transition: var(--transition-settings), 0ms padding, 0ms font-size;
+  background-color: var(--sec-hover-color);
+  color: var(--white-color);
+  border: 0px;
+  padding: 10px 15px;
+  margin-right: 20px;
+  font-family: var(--body-font);
+  border-radius: 2px;
+}
+
+.image-form input[type="file"]::file-selector-button:hover {
+  background-color: var(--sec-color);
+}
+
+.image-form__display {
+  display: none;
+  width: 300px;
+  background-color: var(--sec-color);
+  background-color: transparent;
+}
+
+.image-form__display--active {
+  display: block;
+}

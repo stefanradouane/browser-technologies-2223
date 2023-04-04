@@ -14,6 +14,7 @@ router.get("/", controllers.index.get);
 router.get("/gallery", controllers.gallery.get);
 router.get("/gallery/:image", controllers.detailpage.get);
 router.get("/course", controllers.course.get);
+router.get("/new-image", controllers.image.get);
 
 /*******************************************************
  * Create POST router

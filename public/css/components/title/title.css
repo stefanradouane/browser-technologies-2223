@@ -1,0 +1,27 @@
+/* title */
+
+.title {
+  font-family: var(--h-font);
+}
+
+.title.title--h0 {
+  font-size: clamp(40px, 16.5vmin, 160px);
+}
+
+.title.title--h1 {
+  font-size: clamp(25px, 10vmin, 90px);
+}
+
+.title.title--h2 {
+  font-size: 6vmin;
+  /* border-bottom: 2px solid var(--prim-color); */
+}
+
+.title.title--h3 {
+  font-size: 3vmin;
+  /* border-bottom: 2px solid var(--prim-color); */
+}
+
+.title.title--header {
+  font-size: 25px;
+}

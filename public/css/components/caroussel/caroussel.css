@@ -1,0 +1,133 @@
+/* caroussel */
+
+.caroussel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.caroussel__form {
+  overflow: hidden;
+}
+.caroussel__form-items {
+  overflow: scroll;
+}
+.caroussel__form-items > section {
+  overflow: auto;
+  width: max-content;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.caroussel__form--list {
+  width: 100%;
+}
+
+.caroussel__form--list .caroussel__form-items > section {
+  max-width: unset;
+}
+
+.caroussel__form--list .caroussel__form-items {
+  width: 100%;
+  overflow: unset;
+}
+
+.caroussel__form--list .caroussel__form-items > section {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  width: 100%;
+  gap: 25px;
+}
+
+.caroussel__form--caroussel .caroussel__form-items > section {
+  display: flex;
+}
+
+.caroussel__form-items-item {
+  display: flex;
+  flex-direction: column;
+  width: 25vmin;
+  position: relative;
+  gap: 5px;
+}
+
+.caroussel__form--list .caroussel__form-items-item {
+  width: unset;
+}
+
+.caroussel__form-items-item section {
+  display: flex;
+}
+
+.caroussel__form-items-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.caroussel__form-input {
+  display: contents;
+}
+
+.caroussel__form-input span {
+  display: none;
+}
+
+.caroussel__form-input input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  font-size: 0px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.caroussel__form-input input:checked {
+  background-color: var(--black-color);
+}
+
+.caroussel__options {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+
+.caroussel__option {
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  width: 60px;
+  height: 60px;
+  background-color: var(--sec-color);
+  display: block;
+}
+
+.caroussel__option:checked::after {
+  background-color: var(--prim-color);
+}
+
+.caroussel__option::after {
+  position: absolute;
+  inset: 10%;
+  content: "";
+  background-color: var(--sec-color);
+}
+
+.caroussel__label {
+  position: relative;
+  display: inline-block;
+}
+
+.caroussel__options-box {
+  display: flex;
+  gap: 10px;
+}

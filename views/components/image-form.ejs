@@ -1,0 +1,53 @@
+<form
+  class="image-form text"
+  method="POST"
+  enctype="multipart/form-data"
+  action="/gallery">
+  <section>
+    <label>
+      Titel van de foto*
+      <input
+        type="text"
+        name="img-name"
+        placeholder="Portret van mij"
+        required />
+    </label>
+    <label>
+      Foto alte tekst*
+      <input
+        type="text"
+        name="img-alt"
+        placeholder="Foto van mij uit 2020"
+        required />
+    </label>
+    <label>
+      Foto locatie*
+      <input
+        type="text"
+        name="img-location"
+        placeholder="Locatie van de foto"
+        required />
+    </label>
+    <label>
+      Datum van de foto*
+      <input type="date" name="img-date" required />
+    </label>
+    <label for="image-input">
+      Upload een foto*
+      <input
+        type="file"
+        id="image-input"
+        name="img"
+        accept="image/*"
+        required
+        data-input />
+    </label>
+
+    <p class="text text--small">*Verplicht veld</p>
+    <button class="anchor anchor--btn">Upload</button>
+  </section>
+
+  <div class="image-form__display" data-display>
+    <img data-image width="100%" />
+  </div>
+</form>

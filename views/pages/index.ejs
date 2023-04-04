@@ -1,5 +1,14 @@
-<%- include('../partials/head', {title: "Home"}) %>
-<h1>My Gallery</h1>
-<p>Add a picture to the World Wide Collage</p>
-<a href="/gallery">Show me all the pictures</a>
+<%- include('../partials/head', {title: "World Gallery"}) %>
+<main class="home">
+  <section>
+    <h1 class="title title--h0">World Gallery</h1>
+    <p class="text text-x-large">
+      Bekijk of voeg een foto toe aan de World Gallery
+    </p>
+    <a class="anchor" href="/gallery">Toon alle foto's</a>
+    <a class="anchor anchor--sec" href="/new-image">Voeg een foto toe</a>
+  </section>
+  <%- include('../components/leaf', {position: "b-r"}) %> <%-
+  include('../components/leaf', {position: "t-l"}) %>
+</main>
 <%- include('../partials/footer') %>

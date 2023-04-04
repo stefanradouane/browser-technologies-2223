@@ -1,63 +1,38 @@
-<%- include('../partials/head', {title: "Gallery"}) %>
-<%- include('../partials/header') %>
-<h1>World Wide Collage</h1>
-<h2>Make an image gallery in just a vew clicks</h2>
-<p>You can select an image to make a collage, or click on an image to see the detailpage</p>
-<form method="POST" enctype="multipart/form-data">
-  <div>
-    <label>
-      Image name*
-      <input type="text" name="img-name" required />
-    </label>
-  </div>
-      <div>
-        <label>
-          Image alt*
-          <input type="text" name="img-alt" required />
-        </label>
-      </div>
-      <div>
-        <label>
-          Location
-          <input type="text" name="img-name" disabled />
-        </label>
-      </div>
-      <div>
-        <label>
-          Date
-          <input type="date" name="img-name" disabled />
-        </label>
-      </div>
-      <div>
-        <label for="image-input">
-          Upload an image*
+<%- include('../partials/head', {title: "Gallery"}) %> <%-
+include('../partials/header') %>
+<main class="page">
+  <h1 class="title title--h1">Een wereld vol foto's</h1>
+  <!-- <h2 class="title title--h2">Make an image gallery in just a vew clicks</h2> -->
+  <p class="text">
+    Selecteer foto's om een eigen serie te maken. Of toon een foto.
+  </p>
+  <a class="anchor" href="/new-image">Voeg een foto toe</a>
+
+  <section class="caroussel">
+    <dialog class="caroussel__options text">
+      <h3 class="title title--h3">Verander weergave</h3>
+      <section class="caroussel__options-box">
+        <label for="caroussel" class="caroussel__label">
+          <span> Caroussel </span>
           <input
-          type="file"
-          id="image-input"
-          name="img"
-          accept="image/*"
-          required />
+            type="radio"
+            name="view"
+            class="caroussel__option caroussel__option--caroussel"
+            data-caroussel-input
+            checked="checked" />
         </label>
-      </div>
-        <input type="submit" value="Upload" />
-    </form>
-    <section>
-      <h2>The image collection of the world</h2>
-      <form method="POST">
-        <input type="hidden" name="serie" value="true">
-        <% if (images) { %> <% images.forEach(image => { %>
-          <a href="/gallery/<%- image.fileName.split("-")[0] %>">
-            <img
-            width="22.5%"
-            src="<%- image.fileUrl %>"
-            alt="<%- image.altText %>" />
-          </a>
-          <label>
-            Select Image
-            <input type="checkbox" name="selected-image" value="<%- image.fileName %>">
-          </label>
-          <% }) %> <% } %>
-          <button>Make own serie</button>
-    </section>
-</form>
+        <label for="caroussel" name="list" class="caroussel__label">
+          <span> Lijst </span>
+          <input
+            type="radio"
+            name="view"
+            class="caroussel__option caroussel__option--list"
+            data-list-input />
+        </label>
+      </section>
+    </dialog>
+    <%- include('../components/caroussel-form') %>
+  </section>
+</main>
+
 <%- include('../partials/footer') %>

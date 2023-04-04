@@ -1,0 +1,9 @@
+@font-face {
+  font-family: ZephyRegular;
+  src: url("../../assets/fonts/ZephyrRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: CultureRegular;
+  src: url("../../assets/fonts/CultureRegular.woff") format("woff");
+}

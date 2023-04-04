@@ -48,16 +48,8 @@ const post = async (req, res) => {
         }
         return true;
       });
-
-      //   const possibleToAdd = data.map((item) => {
-      //     return selection.find((select) => select !== item);
-      //   });
-      // .filter((item) => item);
-
-      //   console.log(possibleToAdd);
       res.render("pages/gallery", {
         images: selection,
-        // possibleToAdd: possibleToAdd.length !== 0 ? possibleToAdd : undefined,
       });
     });
   }

@@ -1,0 +1,40 @@
+:root {
+  --h-font: ZephyRegular;
+  --body-font: CultureRegular;
+  /* --white-color: #fff; */
+  --white-color: #d7e5e0;
+  --black-color: #000;
+  --sec-black-color: #010101;
+  --prim-color: hsl(161, 21%, 47%);
+  --sec-color: hsl(161, 21%, 37%);
+  --prim-hover-color: hsl(161, 21%, 27%);
+  --sec-hover-color: hsl(161, 21%, 17%);
+  --color: #5f9282;
+  --black-hover-color: #111;
+
+  --transition-duration: 200ms;
+  --transition-timing-function: ease-in-out;
+  --transition-elements: all;
+  --transition-settings: var(--transition-duration) var(--transition-elements)
+    var(--transition-timing-function);
+
+  --column-count: 1;
+}
+
+@media (min-width: 500px) {
+  :root {
+    --column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --column-count: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --column-count: 4;
+  }
+}

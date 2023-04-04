@@ -1,24 +1,35 @@
 <%- include('../partials/head', {title: image?.fileName.split("-")[0] ? image.fileName.split("-")[0] : "Foto niet gevonden"}) %>
 <%- include('../partials/header') %>
+<main class="page">
+  <section class="detailpage">
     <% if (image) { %>
-    <h1><%- image.fileName.split("-")[0] %></h1>
+    <h1 class="title title--h1"><%- image.fileName.split("-")[0] %></h1>
     <img src="<%- image.fileUrl %>" width="100%" alt="<%- image.altText %>" />
-    <p><%- image.altText %></p>
+    <section class="text">
+      <p>Foto beschrijving: <%- image.altText %></p>
+      <p>Datum: 10/20/2023</p>
+      <p>Locatie: Onbekend</p>
+    </section>
+
     <% } else { %>
       <%- include('../components/detailpage-error') %>
     <% } %>
+  </section>
 
     <!-- TODO: make this a partial -->
     <% if (recommended) { %>
-    <section>
-      <h2>May also like</h2>
+    <section class="detailpage-options">
+      <h2 class="title title--h2">Foto's die je wellicht leuk vind</h2>
       <% recommended.forEach(recommendation => { %>
-      <a href="/gallery/<%- recommendation.fileName.split("-")[0] %>">
-        <h3><%- recommendation.fileName.split("-")[0] %></h3>
-        <img src="<%- recommendation.fileUrl %>" width="25%" />
-      </a>
+        <section>
+          <section>
+            <img src="<%- recommendation.fileUrl %>" width="25%" />
+          </section>
+          <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- recommendation.fileName.split("-")[0] %>">Toon <%- recommendation.fileName.split("-")[0] %></a>
+        </section>
       <% }) %>
     </section>
     <%}%>
+  </main>
 
 <%- include('../partials/footer') %>

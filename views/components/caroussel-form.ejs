@@ -1,0 +1,24 @@
+<form method="POST" class="caroussel__form caroussel__form--caroussel" data-caroussel>
+    <input type="hidden" name="serie" value="true">
+    <% if (images) { %> 
+        <section class="caroussel__form-items">
+            <section>
+
+    <% images.forEach(image => { %>
+        <section class="caroussel__form-items-item">
+                <img width="40%" src="<%- image.fileUrl %>" alt="<%- image.altText %>" />
+                <section>
+                    <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- image.fileName.split("-")[0]%>">Toon <%- image.fileName.split("-")[0] %></a>
+                    <label class="caroussel__form-input">
+                        <span class="text">Selecteer foto</span>
+                        <input type="checkbox" name="selected-image" value="<%- image.fileName %>">
+                    </label>
+                </section>
+        </section>
+        <% }) %> 
+    </section>
+
+    </section>
+    <% } %>
+    <button class="anchor anchor--btn">Maak eigen serie</button>
+</form>

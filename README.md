@@ -8,11 +8,12 @@ De demo is te bekijken via deze [link](https://browser-technologies-2223-product
 
 ## 🔎 Inhoudsopgave
 
-- [Case](#📁-case---online-foto-album)
-- [Project installatie](#🔌-core-functionaliteiten)
-- [Criteria](#criteria)
+- [💼 Case](#💼-case---online-foto-album)
+- [✅ Browser functionaliteiten](#✅-browser-functionaliteiten)
+- [🧪 Browser Tests](#🧪-browser-tests)
+- [ℹ️ Bronnen](#ℹ️-bronnen)
 
-## 📁 Case - Online foto album
+## 💼 Case - Online foto album
 
 Ik heb gekozen voor de case een online foto album.
 
@@ -70,7 +71,7 @@ if ("geolocation" in navigator) {
 
 De demo is te bekijken via deze [link](https://browser-technologies-2223-production.up.railway.app/gallery).
 
-#### HTML File API
+### 📁 HTML File API
 
 Wanneer je afbeeldingen wilt uploaden op een website, kan de HTML5 File API worden gebruikt om het uploadproces op een gestroomlijnde manier te beheren. De File API maakt het mogelijk om bestanden op de client-side te selecteren en te manipuleren voordat ze worden geüpload naar de server.
 
@@ -82,7 +83,7 @@ Als PE op deze upload laat wanneer FileReader beschikbaar is de foto zien in de 
 
 Ik heb multer gebruikt op de server om ervoor te zorgen dat de afbeelding hoe dan ook word geupload ongeacht de browser.
 
-#### CSS lay-out
+### 🏗️ CSS lay-out
 
 De CSS layout is gebruikt als een PE om de afbeeldingen in de foto galerij te ordenen en te stylen. Door het gebruik van CSS Grid en Flexbox is een aantrekkelijke en gemakkelijk te navigeren galerij gecreëerd.
 
@@ -94,7 +95,7 @@ Om het gebruiksgemak voor gebruikers te vergroten, is een functionaliteit toegev
 
 In het kort, de combinatie van CSS, JavaScript en de mogelijkheid om de weergave van de galerij te wisselen, resulteert in een krachtige foto galerij website die aantrekkelijk is voor gebruikers en tegelijkertijd gemakkelijk te navigeren is.
 
-#### Filtering
+### :spiral_notepad: Filtering
 
 Een backend filter past perfect bij het principe progressive enhancement omdat het de basisfunctionaliteit van een website kan verbeteren zonder afhankelijk te zijn van de mogelijkheden van het apparaat en de browser van de gebruiker. Door het gebruik van een backend filter kunnen de gegevens die aan de frontend worden gepresenteerd, worden geoptimaliseerd voor elk apparaat, browser of netwerksnelheid.
 
@@ -121,7 +122,7 @@ De onderzochte features zijn:
 
 Tot slot heb ik ook een test gedaan met een screen reader.
 
-#### Desktop
+### 💻 Desktop
 
 Ik heb de website getest in Chrome, Safari & Firefox. Ik kwam er al snel achter dat door de wijze het programmeren van de website, met een server die volledig de website rendered elke functionaliteit in elke browser werkt. Met de default functionaliteiten van HTML los ik de meeste dingen op. De default zou daarom ook gemakkelijk kunnen worden enhanced.
 
@@ -131,13 +132,13 @@ Ik heb zelfs de website getest op een windows 7 met chrome 109 via de website [b
 
 <img src="./docs/assets/ss-firefox.png" alt="foto uit firefox" width="200px">
 
-#### Mobiel
+### 📱 Mobiel
 
 Net als op de desktop werkte alles op de mobiel precies zoals verwacht.
 
 <img src="./docs/assets/Fotoiphone-11.png" alt="foto safari ios" width="200px">
 
-#### Obscure browser
+### 👴 Obscure browser
 
 Naast het testen in normale browsers heb ik mijn website ook getest in een obscure browser. Ik heb gekozen om mijn website te testen in PrinceXML. PrinceXML wordt vaak beschouwd als een obscure browser omdat het geen traditionele webbrowser is, zoals Chrome of Firefox, die rechtstreeks toegang biedt tot het internet. In plaats daarvan is het een programma waarmee webontwikkelaars hun webpagina's kunnen converteren naar PDF-bestanden voor afdruk- of archiveringsdoeleinden.
 
@@ -153,7 +154,7 @@ Het PDF bestand dat PrinceXML genereerde zag er als volgt uit.
 
 > Het document op de screenshot bevat 1 foto, omdat het het bestand vanaf een externe bron laad. Bij het laden van alle afbeeldingen heeft PrinceXML een error
 
-#### Feature: HTML File API
+### ✨ Feature: HTML File API
 
 Deze feature word in de volgende browsers ondersteund:
 
@@ -165,7 +166,7 @@ Deze feature word in de volgende browsers ondersteund:
 
 Zonder javascript doet deze functionaliteit het niet. Het is dus ook niet mogelijk om een foto te tonen die je hebt geupload met een input file.
 
-#### Feature: CSS lay-out
+### ✨ Feature: CSS lay-out
 
 Deze feature bestaat uit twee onderdelen, flex lay-out en grid lay-out. Ik heb beide lay-out typen onderzocht. Met prefixes heeft flex een usage van 99.23%. Het is dus in vrijwel elke browser geimplementeerd. Grid heeft daarnaast een iets lagere usage met prefixes. De usage van grid is 96.5%. Beide scoren dus vrij hoog en zijn dus ook te gebruiken om een lay-out mee te stijlen.
 
@@ -173,7 +174,7 @@ Deze feature bestaat uit twee onderdelen, flex lay-out en grid lay-out. Ik heb b
 
 <img src="./docs/assets/caniuse-grid.png" alt="can i use grid" width="40%">
 
-#### Screen reader test.
+### 🔈 Screen reader test.
 
 Ik heb ook een screen reader test gedaan op mijn website. Uit deze test bleek dat mijn website - Wel <input type="checkbox" checked> - toegankelijk is met een screen reader.
 

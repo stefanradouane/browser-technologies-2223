@@ -15,15 +15,13 @@
       <%- include('../components/detailpage-error') %>
     <% } %>
   </section>
-
-    <!-- TODO: make this a partial -->
     <% if (recommended) { %>
     <section class="detailpage-options">
       <h2 class="title title--h2">Foto's die je wellicht leuk vind</h2>
       <% recommended.forEach(recommendation => { %>
         <section>
           <figure class="figure">
-            <img src="<%- recommendation.fileUrl %>" width="25%" />
+            <img src="<%- recommendation.fileUrl %>" width="25%" alt="related image" />
           </figure>
           <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- recommendation.fileName.split("-")[0] %>">Toon <%- recommendation.fileName.split("-")[0] %></a>
         </section>

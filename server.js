@@ -5,7 +5,7 @@ const express = require("express");
 // let ejs = require("ejs");
 
 const app = express();
-const port = 4444;
+const port = process.env.PORT || 4444;
 
 const routes = require("./routes/routes");
 const bodyParser = require("body-parser");

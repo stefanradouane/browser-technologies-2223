@@ -153,7 +153,9 @@ Hier is een schermopname van mijn site in Flow.
 
 https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/16af025c-e6ab-4d01-a8bb-ce809b9e5752
 
-> De error die ik krijg van multer komt omdat de foto niet goed wordt geupload. Dit komt omdat de body van de request niet goed wordt verstuurd. Dit is een probleem dat ik niet heb kunnen oplossen. Ik heb wel een aantal dingen geprobeerd, maar ik heb geen oplossing kunnen vinden.
+> De error die ik krijg van multer komt omdat de foto niet goed wordt geupload. Dit komt omdat de afbeelding in de body van de request niet goed wordt verstuurd. Dit is een probleem dat ik niet heb kunnen oplossen. Ik heb wel een aantal dingen geprobeerd, maar ik heb geen oplossing kunnen vinden.
+
+Het filteren van de foto's werkt wel naar verwachting. Hier is de video waarin je ziet hoe de filter ook in de obscure browser werkt.
 
 ### ✨ Feature: HTML File API
 

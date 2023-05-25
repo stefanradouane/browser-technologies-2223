@@ -79,7 +79,7 @@ Om bestanden te uploaden, kun je een HTML-formulier gebruiken met een input type
 
 Multer is een middleware voor Node.js dat helpt bij het verwerken van multipart/form-data, een type gegevens dat vaak wordt gebruikt voor het uploaden van bestanden via HTML-formulieren. Multer maakt het mogelijk om eenvoudig bestanden te ontvangen en op te slaan die naar de server worden geüpload.
 
-Als PE op deze upload laat wanneer FileReader beschikbaar is de foto zien in de DOM.
+Als PE op deze upload laat wanneer FileReader beschikbaar is de foto zien in de DOM. Daarnaast wordt de input met naam en datum van de foto automatisch ingevuld met de meta-data van de foto.
 
 Ik heb multer gebruikt op de server om ervoor te zorgen dat de afbeelding hoe dan ook word geupload ongeacht de browser.
 

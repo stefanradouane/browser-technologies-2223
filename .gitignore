@@ -2,7 +2,3 @@
 /nogniet/*
 
 node_modules
-
-/scratch
-
-public/dist/user/*

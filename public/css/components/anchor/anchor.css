@@ -2,7 +2,8 @@
 .anchor {
   --transition-elements: all;
   transition: var(--transition-settings), 0ms padding, 0ms font-size;
-  font-size: clamp(16px, 3vmin, 28px);
+  font-size: 3vmin;
+  font-size: clamp(16px, 3vmin, 22px);
   text-decoration: none;
   padding: 10px 12px;
   background-color: var(--black-color);
@@ -13,6 +14,12 @@
   border: none;
   line-height: 1em;
   cursor: pointer;
+  word-break: break-word;
+}
+
+.anchor:hover {
+  text-decoration: underline;
+  background-color: var(--black-hover-color);
 }
 
 .anchor--fw {
@@ -23,6 +30,24 @@
 .anchor--btn {
   margin-top: 10px;
   text-decoration: none !important;
+  word-break: unset;
+}
+
+.anchor--btn[disabled] {
+  color: grey;
+  background-color: #e5e5e5;
+  cursor: default;
+  display: block;
+}
+
+.anchor--ter {
+  background-color: hotpink;
+  color: var(--black-color);
+}
+
+.anchor--ter:hover {
+  background-color: pink;
+  color: var(--black-color);
 }
 
 .anchor--sec {
@@ -35,7 +60,6 @@
   margin-top: 2%;
 }
 
-.anchor:hover {
-  text-decoration: underline;
-  background-color: var(--black-hover-color);
+.anchor--fix {
+  width: max-content;
 }

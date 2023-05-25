@@ -7,52 +7,24 @@
 }
 
 .caroussel__form {
-  overflow: hidden;
+  /* overflow: hidden; */
+  margin-top: 20px;
+  width: 100%;
 }
 .caroussel__form-items {
-  overflow: scroll;
+  width: 100%;
 }
 .caroussel__form-items > section {
-  overflow: auto;
-  width: max-content;
   gap: 20px;
-  padding: 16px 0;
-}
-
-.caroussel__form--list {
-  width: 100%;
-}
-
-.caroussel__form--list .caroussel__form-items > section {
-  max-width: unset;
-}
-
-.caroussel__form--list .caroussel__form-items {
-  width: 100%;
-  overflow: unset;
-}
-
-.caroussel__form--list .caroussel__form-items > section {
+  /* padding-bottom: 16px; */
   display: grid;
   grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
   width: 100%;
   gap: 25px;
 }
 
-.caroussel__form--caroussel .caroussel__form-items > section {
-  display: flex;
-}
-
 .caroussel__form-items-item {
-  display: flex;
-  flex-direction: column;
-  width: 25vmin;
   position: relative;
-  gap: 5px;
-}
-
-.caroussel__form--list .caroussel__form-items-item {
-  width: unset;
 }
 
 .caroussel__form-items-item section {
@@ -60,10 +32,15 @@
 }
 
 .caroussel__form-items-item img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
 }
+
+/* .caroussel__form-items-item img:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: (1 / 1) * 100%;
+} */
 
 input[type="checkbox"] {
   appearance: none;
@@ -84,8 +61,8 @@ input[type="checkbox"] {
   font-size: 0px;
   background-color: var(--white-color);
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   cursor: pointer;
 }
 
@@ -130,4 +107,47 @@ input[type="checkbox"] {
 .caroussel__options-box {
   display: flex;
   gap: 10px;
+}
+
+.caroussel__form--caroussel section img {
+  width: calc(var(--card-width) - 40px);
+}
+
+.caroussel__form--caroussel .caroussel__form-items {
+  margin: auto;
+  max-width: var(--card-width);
+}
+
+.caroussel__form--caroussel .caroussel__form-items .slider {
+  overflow-x: scroll;
+  display: flex;
+  width: max-content;
+  scroll-snap-type: x mandatory;
+  max-width: var(--card-width);
+  scroll-behavior: smooth;
+  gap: 0;
+}
+
+.caroussel__form--caroussel .caroussel__form-items-item {
+  transition: filter 100ms ease-in-out;
+  filter: blur(5px);
+  width: var(--card-width);
+  scroll-snap-align: center;
+  padding: 20px;
+}
+.caroussel__form--caroussel .caroussel__form-items-item.active {
+  filter: blur(0px);
+}
+
+.caroussel__form--caroussel .caroussel__controls {
+  display: flex;
+  position: static;
+  border: none;
+  background: none;
+  gap: 10px;
+  margin: auto;
+}
+
+.no-observer {
+  filter: blur(0px) !important;
 }

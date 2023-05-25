@@ -21,6 +21,10 @@ router.get("/new-image", controllers.image.get);
  ********************************************************/
 router.post("/gallery", upload.single("img"), controllers.gallery.post);
 
+// router.post("/new-image", (req, res) => {
+//   res.redirect("/gallery");
+// });
+
 /*******************************************************
  * Export router
  ********************************************************/

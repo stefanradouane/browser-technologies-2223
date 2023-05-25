@@ -1,29 +1,22 @@
 @import "./lib/all.css";
 @import "./components/all.css";
 
+:root {
+}
+
 body {
   font-family: var(--body-font);
-  background: var(--color);
-  background: linear-gradient(
-    30deg,
-    var(--color) 2.5%,
-    var(--sec-color) 2.5%,
-    var(--sec-color) 5%,
-    var(--color) 5%,
-    var(--color) 7.5%,
-    var(--sec-color) 7.5%,
-    var(--sec-color) 10%,
-    var(--color) 10%,
-    var(--color) 12.5%,
-    var(--sec-color) 12.5%,
-    var(--sec-color) 15%,
-    var(--color) 15%
-  );
+  /* background: var(--bg-color); */
+  background: linear-gradient(30deg, transparent 0, var(--sec-color) 50%);
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   /* place-items: center; */
+}
+
+body.home {
+  background: green !important;
 }
 
 /* home */
@@ -36,8 +29,9 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   height: 100%;
+  width: 100%;
   text-align: center;
-  padding: 0 5%;
+  padding: 0 20px;
   margin: auto;
 }
 
@@ -52,15 +46,18 @@ body {
 /* Text */
 
 .text {
+  font-size: 3.5vmin;
   font-size: clamp(16px, 3.5vmin, 25px);
 }
 
 .text--small {
+  font-size: 2.5vmin;
   font-size: clamp(14px, 2.5vmin, 22px);
 }
 
 .text-x-large {
-  font-size: clamp(16px, 4vmin, 40px);
+  font-size: 4vmin;
+  font-size: clamp(16px, 4vmin, 30px);
   width: 100%;
 }
 
@@ -68,9 +65,26 @@ body {
 
 .leaf {
   position: absolute;
-  width: 45vmin;
-  fill: var(--white-color);
+  width: min(60vmin, 400px);
+  stroke: var(--prim-color);
+  stroke-width: 0.5px;
   z-index: -1;
+  animation: stroke 3s forwards;
+  stroke-dasharray: 1420;
+  stroke-dashoffset: 1420;
+  fill: var(--white-color);
+  fill: transparent;
+  stroke-linejoin: bevel;
+  /* stroke-opacity: 0.75; */
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 1420;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 .leaf-b-r {
@@ -81,7 +95,7 @@ body {
 .leaf-t-l {
   top: 0;
   left: 0;
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 /* Detailpage */
@@ -99,22 +113,29 @@ body {
 
 .detailpage img {
   width: 100%;
-  max-width: 750px;
+  max-width: 500px;
 }
 
 /* Options */
 .detailpage-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 .detailpage-options > section {
+  margin: 20px 20px 0 0;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
   max-width: 250px;
-  gap: 5px;
+}
+
+.detailpage-options > section:last-of-type {
+  margin: 20px 0 0 0;
+}
+
+.detailpage-options > section .figure {
+  margin-bottom: 5px;
 }
 
 .detailpage-options .title {
@@ -123,7 +144,6 @@ body {
 
 .detailpage-options > section img {
   width: 100%;
-  aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
 }
@@ -156,4 +176,47 @@ body {
 .home + .footer {
   position: fixed;
   inset: auto 0 0 0;
+}
+
+/* figure */
+
+.figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.caroussel__form--caroussel .figure {
+  /* width: calc(60vw - 40px); */
+  /* width: 60vw; */
+}
+
+.figure:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+
+.figure img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* aspect-ratio: 1/1; */
+  object-fit: cover;
+  /* position: relative; */
+  display: block;
+}
+
+.figure + section a {
+  width: calc(var(--card-width) - 40px);
+}
+.caroussel__form--list .figure + section a {
+  /* width: 100%; */
+  align-self: center;
 }

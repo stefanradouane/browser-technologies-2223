@@ -22,9 +22,9 @@
       <h2 class="title title--h2">Foto's die je wellicht leuk vind</h2>
       <% recommended.forEach(recommendation => { %>
         <section>
-          <section>
+          <figure class="figure">
             <img src="<%- recommendation.fileUrl %>" width="25%" />
-          </section>
+          </figure>
           <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- recommendation.fileName.split("-")[0] %>">Toon <%- recommendation.fileName.split("-")[0] %></a>
         </section>
       <% }) %>

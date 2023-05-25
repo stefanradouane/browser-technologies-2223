@@ -1,24 +1,40 @@
-<form method="POST" class="caroussel__form caroussel__form--caroussel" data-caroussel>
-    <input type="hidden" name="serie" value="true">
-    <% if (images) { %> 
-        <section class="caroussel__form-items">
-            <section>
-
-    <% images.forEach(image => { %>
-        <section class="caroussel__form-items-item">
-                <img width="40%" src="<%- image.fileUrl %>" alt="<%- image.altText %>" />
-                <section>
-                    <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- image.fileName.split("-")[0]%>">Toon <%- image.fileName.split("-")[0] %></a>
-                    <label class="caroussel__form-input">
-                        <span class="text">Selecteer foto</span>
-                        <input type="checkbox" name="selected-image" value="<%- image.fileName %>">
-                    </label>
-                </section>
+<form
+  method="POST"
+  class="caroussel__form caroussel__form--list"
+  data-caroussel>
+  <input type="hidden" name="serie" value="true" />
+  <% if (images) { %>
+  <section class="caroussel__form-items">
+    <section class="slider">
+      <% images.forEach(image => { %>
+      <section class="caroussel__form-items-item">
+        <figure class="figure">
+          <img
+          width="40%"
+          src="<%- image.fileUrl %>"
+          alt="<%- image.altText %>" 
+          loading="lazy"/>
+        </figure>
+        <section>
+          <a class="anchor anchor--sec anchor--fw" href="/gallery/<%- image.fileName.split("-")[0]%>">
+            Toon <%- image.fileName.split("-")[0] %>
+          </a>
+          <label class="caroussel__form-input">
+            <span class="text">Selecteer foto</span>
+            <input
+              type="checkbox"
+              name="selected-image"
+              value="<%- image.fileName %>" />
+          </label>
         </section>
-        <% }) %> 
+      </section>
+      <% }) %>
     </section>
-
-    </section>
-    <% } %>
-    <button class="anchor anchor--btn">Maak eigen serie</button>
+  </section>
+  <dialog class="caroussel__controls">
+    <button class="anchor anchor--ter anchor--btn anchor--fix" data-prev>Vorige</button>
+    <button class="anchor anchor--ter anchor--btn anchor--fix" data-next>Volgende</button>
+  </dialog>
+  <% } %>
+  <button class="anchor anchor--btn anchor--fix">Maak eigen serie</button>
 </form>

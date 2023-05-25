@@ -140,19 +140,18 @@ Net als op de desktop werkte alles op de mobiel precies zoals verwacht.
 
 ### 👴 Obscure browser
 
-Naast het testen in normale browsers heb ik mijn website ook getest in een obscure browser. Ik heb gekozen om mijn website te testen in PrinceXML. PrinceXML wordt vaak beschouwd als een obscure browser omdat het geen traditionele webbrowser is, zoals Chrome of Firefox, die rechtstreeks toegang biedt tot het internet. In plaats daarvan is het een programma waarmee webontwikkelaars hun webpagina's kunnen converteren naar PDF-bestanden voor afdruk- of archiveringsdoeleinden.
+Naast het testen in normale browsers heb ik mijn website ook getest in een obscure browser. Ik heb gekozen om mijn website te testen in Flow. Flow wordt vaak beschouwd als een obscure browser omdat het geen traditionele webbrowser is, zoals Chrome of Firefox. Flow kan op verschillende multimedia gebruikt worden als browser, zo werkt Flow ook bijvoorbeeld op een Raspberry Pi.
 
-PrinceXML is ontworpen om te werken met de nieuwste webstandaarden, zoals HTML5 en CSS3, en kan complexe pagina's nauwkeurig converteren naar PDF-indeling, inclusief dynamische inhoud zoals afbeeldingen, audio en video.
+Naast dat Flow een obscure browser is, is het ook een browser die niet veel gebruikt wordt. Dit komt omdat Flow een specifiek doel heeft en niet rechtstreeks toegang biedt tot het internet zoals traditionele webbrowsers. Het begint al bij alleen de site openen, om een url in te voeren moet je het de toetsen `cmd + l` indrukken. Dit is een van de vele dingen die anders zijn in Flow.
 
-Het gebruik van PrinceXML kan nuttig zijn voor bepaalde toepassingen, zoals het creëren van gepolijste en professioneel uitziende rapporten, tijdschriften en andere documenten. Het is echter mogelijk dat veel webontwikkelaars het niet zullen gebruiken omdat het een specifiek doel heeft en niet rechtstreeks toegang biedt tot het internet zoals traditionele webbrowsers.
+<img src="./docs/assets/ss-flow.png" alt="foto uit flow" width="200px">
 
-Kortom, PrinceXML wordt beschouwd als een obscure browser omdat het een specifieke taak heeft en niet de gebruikelijke functies biedt die mensen gewend zijn van traditionele webbrowsers.
+Ik heb de website dus ook getest met flow. Alle functionaliteiten zijn exact hetzelfde als in de andere browsers. De website werkt dus ook in een obscure browser. Het enige wat niet werkt is de foto uploaden. Het toevoegen van een foto gaat zonder probleem, alleen de body dat flow naar de server vertuurd bevat een speciaal soort data dat `multer` niet kan verwerken.
+Hier is een schermopname van mijn site in Flow.
 
-Het PDF bestand dat PrinceXML genereerde zag er als volgt uit.
+**Video**
 
-<img src="./docs/assets/ss-princeXML.png" alt="princeXML website" width="50%">
-
-> Het document op de screenshot bevat 1 foto, omdat het het bestand vanaf een externe bron laad. Bij het laden van alle afbeeldingen heeft PrinceXML een error
+> De error die ik krijg van multer komt omdat de foto niet goed wordt geupload. Dit komt omdat de body van de request niet goed wordt verstuurd. Dit is een probleem dat ik niet heb kunnen oplossen. Ik heb wel een aantal dingen geprobeerd, maar ik heb geen oplossing kunnen vinden.
 
 ### ✨ Feature: HTML File API
 
@@ -176,7 +175,9 @@ Deze feature bestaat uit twee onderdelen, flex lay-out en grid lay-out. Ik heb b
 
 ### 🔈 Screen reader test.
 
-Ik heb ook een screen reader test gedaan op mijn website. Uit deze test bleek dat mijn website - Wel <input type="checkbox" checked> - toegankelijk is met een screen reader.
+Ik heb een test gedaan met een sreen reader. Ik heb hiervoor de chrome extentie <a href="https://chrome.google.com/webstore/detail/screen-reader-by-userway/ompobmbbbjcmoeepdplbindbbpmbncka">Screen Reader by UserWay</a> gebruikt. Deze extentie is gratis te downloaden in de chrome webstore. Ik heb de website getest met deze screen reader. Uit de test bleek dat de website goed te gebruiken is met een screen reader. De screen reader las alle tekst goed voor en de website was goed te navigeren. Ik heb een schermopname gemaakt van de test. Deze is hieronder te zien.
+
+> Video
 
 ## ℹ️ Bronnen
 
@@ -185,3 +186,4 @@ Ik heb ook een screen reader test gedaan op mijn website. Uit deze test bleek da
 3. [Lagen van progressive enhancement - smashingmagazine](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
 4. [Wat is feature detection - MDN](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 5. [CSS usage - MDN](https://caniuse.com/)
+6. [Screen Reader by UserWay](https://chrome.google.com/webstore/detail/screen-reader-by-userway/ompobmbbbjcmoeepdplbindbbpmbncka)

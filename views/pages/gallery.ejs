@@ -6,33 +6,40 @@ include('../partials/header') %>
   <p class="text">
     Selecteer foto's om een eigen serie te maken. Of toon een foto.
   </p>
-  <a class="anchor" href="/new-image">Voeg een foto toe</a>
+  <a class="anchor anchor--fix" href="/new-image">Voeg een foto toe</a>
 
+  <% if (images.length >= 1) { %>
   <section class="caroussel">
-    <dialog class="caroussel__options text">
+    <section class="caroussel__options text">
       <h3 class="title title--h3">Verander weergave</h3>
       <section class="caroussel__options-box">
-        <label for="caroussel" class="caroussel__label">
-          <span> Caroussel </span>
-          <input
-            type="radio"
-            name="view"
-            class="caroussel__option caroussel__option--caroussel"
-            data-caroussel-input
-            checked="checked" />
-        </label>
         <label for="caroussel" name="list" class="caroussel__label">
           <span> Lijst </span>
           <input
             type="radio"
             name="view"
             class="caroussel__option caroussel__option--list"
-            data-list-input />
+            data-list-input
+            checked="checked" />
+        </label>
+        <label for="caroussel" class="caroussel__label">
+          <span> Caroussel </span>
+          <input
+            type="radio"
+            name="view"
+            class="caroussel__option caroussel__option--caroussel"
+            data-caroussel-input />
         </label>
       </section>
-    </dialog>
+    </section>
     <%- include('../components/caroussel-form') %>
   </section>
+  <% } else { %>
+  <section class="empty-state">
+    <h3 class="title title--h3">Er zijn nog geen foto's toegevoegd.</h3>
+    <p class="text">Plaats de eerste foto!</p>
+  </section>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

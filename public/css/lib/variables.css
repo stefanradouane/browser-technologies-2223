@@ -5,11 +5,21 @@
   --white-color: #d7e5e0;
   --black-color: #000;
   --sec-black-color: #010101;
-  --prim-color: hsl(161, 21%, 47%);
-  --sec-color: hsl(161, 21%, 37%);
-  --prim-hover-color: hsl(161, 21%, 27%);
-  --sec-hover-color: hsl(161, 21%, 17%);
-  --color: #5f9282;
+  /* --prim-color: hsl(161, 21%, 47%); */
+  /* --prim-color: hsl(290, 21%, 47%); */
+  --prim-color: #b941cb;
+
+  /* --sec-color: hsl(161, 21%, 37%); */
+  /* --sec-color: hsl(302, 21%, 37%); */
+  /* --prim-hover-color: hsl(161, 21%, 27%); */
+  --prim-hover-color: hsl(310, 21%, 27%);
+  /* --sec-hover-color: hsl(161, 21%, 17%); */
+  --sec-hover-color: hsl(293, 21%, 17%);
+
+  --bg-color: #b941cb;
+  --sec-color: #54125e;
+  --bg-stripe-color: hsl(302, 60%, 82%);
+
   --black-hover-color: #111;
 
   --transition-duration: 200ms;
@@ -19,6 +29,9 @@
     var(--transition-timing-function);
 
   --column-count: 1;
+  --card-width: 60vmin;
+
+  color-scheme: light dark;
 }
 
 @media (min-width: 500px) {
@@ -27,13 +40,13 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   :root {
     --column-count: 3;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   :root {
     --column-count: 4;
   }

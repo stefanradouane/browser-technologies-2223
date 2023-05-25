@@ -144,12 +144,14 @@ Naast het testen in normale browsers heb ik mijn website ook getest in een obscu
 
 Naast dat Flow een obscure browser is, is het ook een browser die niet veel gebruikt wordt. Dit komt omdat Flow een specifiek doel heeft en niet rechtstreeks toegang biedt tot het internet zoals traditionele webbrowsers. Het begint al bij alleen de site openen, om een url in te voeren moet je het de toetsen `cmd + l` indrukken. Dit is een van de vele dingen die anders zijn in Flow.
 
-<img src="./docs/assets/ss-flow.png" alt="foto uit flow" width="200px">
+![image](https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/48f8e7ae-f975-4bd3-a19e-7f548d494c70)
+
+> Zoals je op de foto kunt zien is de achtergrond wit en de tekst zwart, dit komt omdat de property `color-scheme: light dark` niet werkt in de Flow browser
 
 Ik heb de website dus ook getest met flow. Alle functionaliteiten zijn exact hetzelfde als in de andere browsers. De website werkt dus ook in een obscure browser. Het enige wat niet werkt is de foto uploaden. Het toevoegen van een foto gaat zonder probleem, alleen de body dat flow naar de server vertuurd bevat een speciaal soort data dat `multer` niet kan verwerken.
 Hier is een schermopname van mijn site in Flow.
 
-**Video**
+https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/16af025c-e6ab-4d01-a8bb-ce809b9e5752
 
 > De error die ik krijg van multer komt omdat de foto niet goed wordt geupload. Dit komt omdat de body van de request niet goed wordt verstuurd. Dit is een probleem dat ik niet heb kunnen oplossen. Ik heb wel een aantal dingen geprobeerd, maar ik heb geen oplossing kunnen vinden.
 
@@ -177,7 +179,7 @@ Deze feature bestaat uit twee onderdelen, flex lay-out en grid lay-out. Ik heb b
 
 Ik heb een test gedaan met een sreen reader. Ik heb hiervoor de chrome extentie <a href="https://chrome.google.com/webstore/detail/screen-reader-by-userway/ompobmbbbjcmoeepdplbindbbpmbncka">Screen Reader by UserWay</a> gebruikt. Deze extentie is gratis te downloaden in de chrome webstore. Ik heb de website getest met deze screen reader. Uit de test bleek dat de website goed te gebruiken is met een screen reader. De screen reader las alle tekst goed voor en de website was goed te navigeren. Ik heb een schermopname gemaakt van de test. Deze is hieronder te zien.
 
-> Video
+https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/dacbb051-243e-4d49-8352-58dc73c08ded
 
 ## ℹ️ Bronnen
 

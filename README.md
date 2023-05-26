@@ -157,6 +157,8 @@ https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/16af
 
 Het filteren van de foto's werkt wel naar verwachting. Hier is de video waarin je ziet hoe de filter ook in de obscure browser werkt.
 
+https://github.com/stefanradouane/browser-technologies-2223/assets/94455025/17805e96-3193-42db-9eae-727cd1d45aea
+
 ### ✨ Feature: HTML File API
 
 Deze feature word in de volgende browsers ondersteund:
